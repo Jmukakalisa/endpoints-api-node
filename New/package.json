@@ -1,0 +1,35 @@
+{
+  "name": "endpoints-api-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jmukakalisa/endpoints-api-node.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jmukakalisa/endpoints-api-node/issues"
+  },
+  "homepage": "https://github.com/Jmukakalisa/endpoints-api-node#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.9.0",
+    "body-parser": "^1.20.1",
+    "cloudinary": "^1.33.0",
+    "joi": "^17.7.0",
+    "multer": "^1.4.5-lts.1",
+    "multer-storage-cloudinary": "^4.0.0",
+    "sharp": "^0.31.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+
+}
