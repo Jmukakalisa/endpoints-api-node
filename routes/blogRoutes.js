@@ -7,8 +7,8 @@ import {
   updateBlog,
 } from '../controllers/blog.controller.js';
 import multer from 'multer';
-import validate from '../middleware/validation/validation.middleware.js';
-import { blogCreationSchema } from '../middleware/validation/validation.js';
+import validate from '../middleware/mildware/middlewareValidation.js';
+import { blogCreationSchema } from '../middleware/mildware/validation.js';
 
 const blogRouter = Router();
 const storage = multer.diskStorage({});

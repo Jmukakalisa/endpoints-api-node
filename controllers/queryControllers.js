@@ -1,4 +1,4 @@
-import queryModel from '../models/Queries.model.js';
+import queryModel from '../models/queriesModels.js';
 
 const getAllQueries = async (req, res) => {
   const queries = await queryModel.find();
