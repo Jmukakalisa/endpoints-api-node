@@ -4,11 +4,19 @@ import {
   deleteBlog,
   getAllBlogs,
   getBlogId,
-  updateBlog,
-} from '../controllers/blog.controller.js';
+  getComments,
+  addComment,
+  like,
+  likesCounter,
+  updateBlog
+} from '../controllers/blogsController.js';
 import multer from 'multer';
-import validate from '../middleware/mildware/middlewareValidation.js';
-import { blogCreationSchema } from '../middleware/mildware/validation.js';
+import validate from '../middleware/validation/middlewareValidation.js';
+import { blogCreationSchema, commentsSchema, } from '../middleware/validation/validation.js';
+import {
+  isLoggedIn,
+  isAdmin,
+} from '../middleware/authentication/middlewareAuth.js';
 
 const blogRouter = Router();
 const storage = multer.diskStorage({});
@@ -24,11 +32,22 @@ const uploads = multer({ storage, fileFilter });
 blogRouter.get('/blogs', getAllBlogs);
 blogRouter.post(
   '/blogs',
-  uploads.single('image'),
-  validate(blogCreationSchema),
+  [isLoggedIn, isAdmin, uploads.single('image'), validate(blogCreationSchema)],
   createBlogWithImage,
 );
 blogRouter.get('/blogs/:id', getBlogId);
-blogRouter.patch('/blogs/:id', uploads.single('image'), updateBlog);
-blogRouter.delete('/blogs/:id', deleteBlog);
+blogRouter.patch(
+  '/blogs/:id',
+  [isLoggedIn, isAdmin, uploads.single('image')],
+  updateBlog,
+);
+blogRouter.delete('/blogs/:id', [isLoggedIn, isAdmin], deleteBlog);
+blogRouter.post('/blogs/:id/comments',
+  [isLoggedIn, validate(commentsSchema)],
+  addComment,
+);
+blogRouter.get('/blogs/:id/comments', getComments);
+blogRouter.post('/blogs/:id/likes', isLoggedIn, like);
+blogRouter.get('/blogs/:id/likes', likesCounter);
+
 export default blogRouter;
