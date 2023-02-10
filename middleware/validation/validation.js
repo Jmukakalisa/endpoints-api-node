@@ -7,12 +7,12 @@ const blogCreationSchema = Joi.object({
 const queriesSchema = Joi.object({
   name: Joi.string().min(3).required(),
   email: Joi.string().email().required(),
-  message: Joi.string().min(4).required(),
+  message: Joi.string().min(6).required(),
 });
 const userCreationSchema = Joi.object({
   username: Joi.string().min(3).required(),
   email: Joi.string().email().required(),
-  password: Joi.string().min(4).max(8),
+  password: Joi.string().min(8).max(16),
 });
 const commentsSchema = Joi.object({
   comment: Joi.string().min(3).max(100).required(),

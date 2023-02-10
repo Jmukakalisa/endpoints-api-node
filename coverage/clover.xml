@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1676041173841" clover="3.2.0">
-  <project timestamp="1676041173841" name="All files">
+<coverage generated="1676050607383" clover="3.2.0">
+  <project timestamp="1676050607384" name="All files">
     <metrics statements="229" coveredstatements="138" conditionals="46" coveredconditionals="18" methods="36" coveredmethods="16" elements="311" coveredelements="172" complexity="0" loc="229" ncloc="229" packages="9" files="18" classes="18"/>
-    <package name="node-endpoints-ft-node-endpoints">
+    <package name="endpoints-api-node">
       <metrics statements="20" coveredstatements="14" conditionals="4" coveredconditionals="3" methods="4" coveredmethods="0"/>
-      <file name="index.js" path="C:\Users\Jeanne\Desktop\ATLP\node-endpoints-ft-node-endpoints\index.js">
+      <file name="index.js" path="C:\Users\Jeanne\Desktop\ATLP\endpoints-api-node\index.js">
         <metrics statements="20" coveredstatements="14" conditionals="4" coveredconditionals="3" methods="4" coveredmethods="0"/>
         <line num="10" count="1" type="cond" truecount="2" falsecount="0"/>
         <line num="11" count="1" type="stmt"/>
@@ -28,9 +28,17 @@
         <line num="52" count="0" type="stmt"/>
       </file>
     </package>
-    <package name="node-endpoints-ft-node-endpoints.configuration">
+    <package name="endpoints-api-node.cloudinary">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="imageUpload.js" path="C:\Users\Jeanne\Desktop\ATLP\endpoints-api-node\cloudinary\imageUpload.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="endpoints-api-node.configuration">
       <metrics statements="14" coveredstatements="9" conditionals="4" coveredconditionals="2" methods="4" coveredmethods="2"/>
-      <file name="passport.js" path="C:\Users\Jeanne\Desktop\ATLP\node-endpoints-ft-node-endpoints\configuration\passport.js">
+      <file name="passport.js" path="C:\Users\Jeanne\Desktop\ATLP\endpoints-api-node\configuration\passport.js">
         <metrics statements="14" coveredstatements="9" conditionals="4" coveredconditionals="2" methods="4" coveredmethods="2"/>
         <line num="3" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
@@ -48,9 +56,9 @@
         <line num="35" count="0" type="stmt"/>
       </file>
     </package>
-    <package name="node-endpoints-ft-node-endpoints.controllers">
+    <package name="endpoints-api-node.controllers">
       <metrics statements="104" coveredstatements="46" conditionals="18" coveredconditionals="5" methods="16" coveredmethods="6"/>
-      <file name="auth.controller.js" path="C:\Users\Jeanne\Desktop\ATLP\node-endpoints-ft-node-endpoints\controllers\auth.controller.js">
+      <file name="authControllers.js" path="C:\Users\Jeanne\Desktop\ATLP\endpoints-api-node\controllers\authControllers.js">
         <metrics statements="28" coveredstatements="13" conditionals="6" coveredconditionals="2" methods="3" coveredmethods="1"/>
         <line num="9" count="1" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
@@ -81,7 +89,7 @@
         <line num="69" count="3" type="stmt"/>
         <line num="73" count="0" type="stmt"/>
       </file>
-      <file name="blog.controller.js" path="C:\Users\Jeanne\Desktop\ATLP\node-endpoints-ft-node-endpoints\controllers\blog.controller.js">
+      <file name="blogControllers.js" path="C:\Users\Jeanne\Desktop\ATLP\endpoints-api-node\controllers\blogControllers.js">
         <metrics statements="69" coveredstatements="31" conditionals="12" coveredconditionals="3" methods="11" coveredmethods="5"/>
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="3" type="stmt"/>
@@ -153,7 +161,7 @@
         <line num="186" count="0" type="stmt"/>
         <line num="192" count="1" type="stmt"/>
       </file>
-      <file name="query.controller.js" path="C:\Users\Jeanne\Desktop\ATLP\node-endpoints-ft-node-endpoints\controllers\query.controller.js">
+      <file name="queryControllers.js" path="C:\Users\Jeanne\Desktop\ATLP\endpoints-api-node\controllers\queryControllers.js">
         <metrics statements="7" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
@@ -164,17 +172,9 @@
         <line num="15" count="0" type="stmt"/>
       </file>
     </package>
-    <package name="node-endpoints-ft-node-endpoints.helpers">
-      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="imageUpload.js" path="C:\Users\Jeanne\Desktop\ATLP\node-endpoints-ft-node-endpoints\helpers\imageUpload.js">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="node-endpoints-ft-node-endpoints.middleware.authentication">
+    <package name="endpoints-api-node.middleware.authentication">
       <metrics statements="18" coveredstatements="14" conditionals="6" coveredconditionals="4" methods="2" coveredmethods="2"/>
-      <file name="auth.middleware.js" path="C:\Users\Jeanne\Desktop\ATLP\node-endpoints-ft-node-endpoints\middleware\authentication\auth.middleware.js">
+      <file name="middlewareAuth.js" path="C:\Users\Jeanne\Desktop\ATLP\endpoints-api-node\middleware\authentication\middlewareAuth.js">
         <metrics statements="18" coveredstatements="14" conditionals="6" coveredconditionals="4" methods="2" coveredmethods="2"/>
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="5" type="cond" truecount="2" falsecount="0"/>
@@ -196,16 +196,9 @@
         <line num="48" count="0" type="stmt"/>
       </file>
     </package>
-    <package name="node-endpoints-ft-node-endpoints.middleware.validation">
+    <package name="endpoints-api-node.middleware.validation">
       <metrics statements="9" coveredstatements="8" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
-      <file name="validation.js" path="C:\Users\Jeanne\Desktop\ATLP\node-endpoints-ft-node-endpoints\middleware\validation\validation.js">
-        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
-      </file>
-      <file name="validation.middleware.js" path="C:\Users\Jeanne\Desktop\ATLP\node-endpoints-ft-node-endpoints\middleware\validation\validation.middleware.js">
+      <file name="middlewareValidations.js" path="C:\Users\Jeanne\Desktop\ATLP\endpoints-api-node\middleware\validation\middlewareValidations.js">
         <metrics statements="5" coveredstatements="4" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
         <line num="1" count="4" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -213,28 +206,35 @@
         <line num="4" count="0" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
       </file>
+      <file name="validation.js" path="C:\Users\Jeanne\Desktop\ATLP\endpoints-api-node\middleware\validation\validation.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+      </file>
     </package>
-    <package name="node-endpoints-ft-node-endpoints.models">
+    <package name="endpoints-api-node.models">
       <metrics statements="28" coveredstatements="20" conditionals="10" coveredconditionals="3" methods="4" coveredmethods="3"/>
-      <file name="Blogs.model.js" path="C:\Users\Jeanne\Desktop\ATLP\node-endpoints-ft-node-endpoints\models\Blogs.model.js">
+      <file name="blogModels.js" path="C:\Users\Jeanne\Desktop\ATLP\endpoints-api-node\models\blogModels.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="5" count="1" type="stmt"/>
         <line num="27" count="1" type="stmt"/>
       </file>
-      <file name="Queries.model.js" path="C:\Users\Jeanne\Desktop\ATLP\node-endpoints-ft-node-endpoints\models\Queries.model.js">
+      <file name="commentModels.js" path="C:\Users\Jeanne\Desktop\ATLP\endpoints-api-node\models\commentModels.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+      </file>
+      <file name="likeModels.js" path="C:\Users\Jeanne\Desktop\ATLP\endpoints-api-node\models\likeModels.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+      </file>
+      <file name="queryModels.js" path="C:\Users\Jeanne\Desktop\ATLP\endpoints-api-node\models\queryModels.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="3" count="1" type="stmt"/>
         <line num="23" count="1" type="stmt"/>
       </file>
-      <file name="comments.model.js" path="C:\Users\Jeanne\Desktop\ATLP\node-endpoints-ft-node-endpoints\models\comments.model.js">
-        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="3" count="1" type="stmt"/>
-      </file>
-      <file name="likes.model.js" path="C:\Users\Jeanne\Desktop\ATLP\node-endpoints-ft-node-endpoints\models\likes.model.js">
-        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="3" count="1" type="stmt"/>
-      </file>
-      <file name="users.model.js" path="C:\Users\Jeanne\Desktop\ATLP\node-endpoints-ft-node-endpoints\models\users.model.js">
+      <file name="userModels.js" path="C:\Users\Jeanne\Desktop\ATLP\endpoints-api-node\models\userModels.js">
         <metrics statements="22" coveredstatements="14" conditionals="10" coveredconditionals="3" methods="4" coveredmethods="3"/>
         <line num="4" count="1" type="stmt"/>
         <line num="27" count="1" type="stmt"/>
@@ -260,16 +260,16 @@
         <line num="60" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="node-endpoints-ft-node-endpoints.routes">
+    <package name="endpoints-api-node.routes">
       <metrics statements="23" coveredstatements="20" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="auth.routes.js" path="C:\Users\Jeanne\Desktop\ATLP\node-endpoints-ft-node-endpoints\routes\auth.routes.js">
+      <file name="authRoutes.js" path="C:\Users\Jeanne\Desktop\ATLP\endpoints-api-node\routes\authRoutes.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="15" count="1" type="stmt"/>
         <line num="17" count="1" type="stmt"/>
         <line num="22" count="1" type="stmt"/>
         <line num="23" count="1" type="stmt"/>
       </file>
-      <file name="blog.routes.js" path="C:\Users\Jeanne\Desktop\ATLP\node-endpoints-ft-node-endpoints\routes\blog.routes.js">
+      <file name="blogRoutes.js" path="C:\Users\Jeanne\Desktop\ATLP\endpoints-api-node\routes\blogRoutes.js">
         <metrics statements="16" coveredstatements="13" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="24" count="1" type="stmt"/>
         <line num="25" count="1" type="stmt"/>
@@ -288,16 +288,16 @@
         <line num="54" count="1" type="stmt"/>
         <line num="55" count="1" type="stmt"/>
       </file>
-      <file name="queries.routes.js" path="C:\Users\Jeanne\Desktop\ATLP\node-endpoints-ft-node-endpoints\routes\queries.routes.js">
+      <file name="queryRoutes.js" path="C:\Users\Jeanne\Desktop\ATLP\endpoints-api-node\routes\queryRoutes.js">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="9" count="1" type="stmt"/>
         <line num="11" count="1" type="stmt"/>
         <line num="12" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="node-endpoints-ft-node-endpoints.services">
+    <package name="endpoints-api-node.users">
       <metrics statements="11" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
-      <file name="auth.service.js" path="C:\Users\Jeanne\Desktop\ATLP\node-endpoints-ft-node-endpoints\services\auth.service.js">
+      <file name="authUsers.js" path="C:\Users\Jeanne\Desktop\ATLP\endpoints-api-node\users\authUsers.js">
         <metrics statements="11" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="6" type="stmt"/>
