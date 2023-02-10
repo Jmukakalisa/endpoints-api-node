@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <coverage generated="1676050607383" clover="3.2.0">
+  service_name: travis-pro
+  repo_token: zVyOTsaifLXFTcb66RxOuxHu6EUNHeMfN
   <project timestamp="1676050607384" name="All files">
     <metrics statements="229" coveredstatements="138" conditionals="46" coveredconditionals="18" methods="36" coveredmethods="16" elements="311" coveredelements="172" complexity="0" loc="229" ncloc="229" packages="9" files="18" classes="18"/>
     <package name="endpoints-api-node">
