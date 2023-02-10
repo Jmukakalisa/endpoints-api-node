@@ -35,24 +35,24 @@ schema.pre('save', function (next) {
   }
 });
 
-schema.methods.confirmPassword = async function (password) {
-  if (!password) throw new Error('No password to compare');
+schema.methods.comparePassword = async function (password) {
+  if (!password) throw new Error('Password is missing; nothing to compare');
   try {
     const result = await bcrypt.compare(password, this.password);
     return result;
   } catch (error) {
-    console.log('Error', error.message);
+    console.log('Error while comparing the password: ', error.message);
   }
 };
 
-schema.statics.emailInUse = async function (email) {
+schema.statics.isThisEmailInUse = async function (email) {
   if (!email) throw new Error('Invalid Email');
   try {
     const user = await this.findOne({ email });
     if (user) return false;
     return true;
   } catch (error) {
-    console.log('error: ', error.message);
+    console.log('error inside isThisEmailInUse method: ', error.message);
     return false;
   }
 };

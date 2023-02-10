@@ -1,22 +1,25 @@
 import { Router } from 'express';
 import {
+  addComment,
   createBlogWithImage,
   deleteBlog,
   getAllBlogs,
   getBlogId,
   getComments,
-  addComment,
   like,
   likesCounter,
-  updateBlog
-} from '../controllers/blogsController.js';
+  updateBlog,
+} from '../controllers/blog.controller.js';
 import multer from 'multer';
-import validate from '../middleware/validation/middlewareValidation.js';
-import { blogCreationSchema, commentsSchema, } from '../middleware/validation/validation.js';
+import validate from '../middleware/validation/validation.middleware.js';
+import {
+  blogCreationSchema,
+  commentsSchema,
+} from '../middleware/validation/validation.js';
 import {
   isLoggedIn,
   isAdmin,
-} from '../middleware/authentication/middlewareAuth.js';
+} from '../middleware/authentication/auth.middleware.js';
 
 const blogRouter = Router();
 const storage = multer.diskStorage({});
@@ -42,7 +45,8 @@ blogRouter.patch(
   updateBlog,
 );
 blogRouter.delete('/blogs/:id', [isLoggedIn, isAdmin], deleteBlog);
-blogRouter.post('/blogs/:id/comments',
+blogRouter.post(
+  '/blogs/:id/comments',
   [isLoggedIn, validate(commentsSchema)],
   addComment,
 );

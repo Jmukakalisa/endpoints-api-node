@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
-import {commentSchema} from './comments.js';
-import { likeSchema } from './likes.js';
+import { commentSchema } from './comments.model.js';
+import { likeSchema } from './likes.model.js';
 
 const schema = mongoose.Schema(
   {

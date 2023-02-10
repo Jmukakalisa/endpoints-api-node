@@ -8,7 +8,7 @@ describe('BLOGS UNIT', () => {
   beforeEach(async () => {
     try {
       mongoose.set('strictQuery', false);
-      await mongoose.connect(process.env.MONGO_URI_TEST);
+      await mongoose.connect("mongodb+srv://Jmukakalisa:Wharfdaycare%401@cluster0.fjkf6.mongodb.net/restFull-api?retryWrites=true&w=majority");
       await blogModel.create({
         title: 'title',
         content: 'content',

@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-import { findOneUser} from '../../users/authUsers.js';
+import { findOneUserService } from '../../services/auth.service.js';
 
 const isLoggedIn = async (req, res, next) => {
   if (req.headers.authorization) {
@@ -7,7 +7,7 @@ const isLoggedIn = async (req, res, next) => {
     try {
       const decodedData = jwt.verify(token, `${process.env.JWT_SECRET}`);
 
-      const currentUser = await findOneUser(decodedData.email);
+      const currentUser = await findOneUserService(decodedData.email);
       if (!currentUser) {
         res.status(401).json({
           status: 401,
@@ -22,14 +22,14 @@ const isLoggedIn = async (req, res, next) => {
       res.status(500).json({
         status: 500,
         success: false,
-        message: `Error authorizing user ${error.message}`,
+        message: `Error when authorizing user ${error.message}`,
       });
     }
   } else {
     res.status(401).json({
       status: 401,
       success: false,
-      message: `You need to login`,
+      message: `Not logged in`,
     });
   }
 };
@@ -48,7 +48,7 @@ const isAdmin = (req, res, next) => {
     res.status(500).json({
       status: 500,
       success: false,
-      message: `Error checking admin ${error.message}`,
+      message: `Error while checking admin ${error.message}`,
     });
   }
 };
