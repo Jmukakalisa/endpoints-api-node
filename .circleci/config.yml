@@ -1,6 +1,3 @@
-# service_name: travis-pro
-# repo_token: zVyOTsaifLXFTcb66RxOuxHu6EUNHeMfN
-
 version: 2.1
 orbs:
   node: circleci/node@4.7.0
@@ -33,10 +30,10 @@ jobs:
       - store_artifacts: # special step to save test results as as artifact
           # Upload test summary for display in Artifacts: https://circleci.com/docs/2.0/artifacts/
           path: test-results
-          prefix: tests
+          # prefix: tests
       - store_artifacts: # for display in Artifacts: https://circleci.com/docs/2.0/artifacts/
           path: coverage
-          prefix: coverage
+          # prefix: coverage
       - store_test_results: # for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
           path: test-results
 
