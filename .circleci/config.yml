@@ -3,7 +3,7 @@
 
 version: 2.1
 orbs:
-  node: circleci/node@4.7.0
+  node: circleci/node@16.13.0
   coveralls: coveralls/coveralls@1.0.4
 
 # Define a job to be invoked later in a workflow.
@@ -41,7 +41,7 @@ jobs:
           path: test-results
 
 workflows:
-  build_and_test:
+  build_test_deploy:
     jobs:
       - build
       - test:
