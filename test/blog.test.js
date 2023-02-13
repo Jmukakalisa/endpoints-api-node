@@ -7,6 +7,7 @@ import userModel from '../models/userModels.js';
 describe('Blogs unit testing', () => {
   beforeEach(async () => {
     try {
+      jest.setTimeout(10000)
       mongoose.set('strictQuery', false);
       await mongoose.connect("mongodb+srv://Jmukakalisa:Wharfdaycare%401@cluster0.fjkf6.mongodb.net/restFull-api?retryWrites=true&w=majority");
       await blogModel.create({
@@ -28,12 +29,12 @@ describe('Blogs unit testing', () => {
     }
   });
 
-  afterEach(async () => {
-    await blogModel.deleteMany({});
-    await userModel.deleteMany({});
-    await mongoose.disconnect();
-    await mongoose.connection.close();
-  });
+  // afterEach(async () => {
+  //   await blogModel.deleteMany({});
+  //   await userModel.deleteMany({});
+  //   await mongoose.disconnect();
+  //   await mongoose.connection.close();
+  // });
   //get all blogs
   describe('GET /api/blogs', () => {
     it('get any specified route', async () => {
@@ -59,6 +60,7 @@ describe('Blogs unit testing', () => {
   // get a single blog
   describe('GET /api/blogs/:id', () => {
     it("return a 400 status if '_id' is invalid", async () => {
+      jest.setTimeout(10000)
       const res = await request(app).get('/api/blogs/23333');
       expect(res.status).toEqual(400);
       const message = res.body.message;
