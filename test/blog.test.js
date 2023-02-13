@@ -5,7 +5,7 @@ import blogModel from '../models/blogModels.js';
 import userModel from '../models/userModels.js';
 
 describe('Blogs unit testing', () => {
-  beforeEach(async () => {
+  beforeAll(async () => {
     try {
       jest.setTimeout(10000)
       mongoose.set('strictQuery', false);
@@ -29,12 +29,12 @@ describe('Blogs unit testing', () => {
     }
   });
 
-  // afterEach(async () => {
-  //   await blogModel.deleteMany({});
-  //   await userModel.deleteMany({});
-  //   await mongoose.disconnect();
-  //   await mongoose.connection.close();
-  // });
+  afterAll(async () => {
+    // await blogModel.deleteMany({});
+    // await userModel.deleteMany({});
+    await mongoose.disconnect();
+    await mongoose.connection.close();
+  });
   //get all blogs
   describe('GET /api/blogs', () => {
     it('get any specified route', async () => {

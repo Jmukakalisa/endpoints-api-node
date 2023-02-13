@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1676278481954" clover="3.2.0">
-  <project timestamp="1676278481954" name="All files">
+<coverage generated="1676279713775" clover="3.2.0">
+  <project timestamp="1676279713775" name="All files">
     <metrics statements="229" coveredstatements="165" conditionals="46" coveredconditionals="21" methods="36" coveredmethods="22" elements="311" coveredelements="208" complexity="0" loc="229" ncloc="229" packages="9" files="18" classes="18"/>
     <package name="endpoints-api-node">
       <metrics statements="20" coveredstatements="16" conditionals="4" coveredconditionals="3" methods="4" coveredmethods="2"/>
@@ -238,11 +238,11 @@
         <metrics statements="22" coveredstatements="14" conditionals="10" coveredconditionals="3" methods="4" coveredmethods="3"/>
         <line num="4" count="1" type="stmt"/>
         <line num="27" count="1" type="stmt"/>
-        <line num="28" count="21" type="cond" truecount="1" falsecount="1"/>
-        <line num="29" count="21" type="stmt"/>
-        <line num="30" count="21" type="cond" truecount="1" falsecount="1"/>
-        <line num="32" count="21" type="stmt"/>
-        <line num="33" count="21" type="stmt"/>
+        <line num="28" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="30" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
         <line num="38" count="1" type="stmt"/>
         <line num="39" count="8" type="cond" truecount="1" falsecount="1"/>
         <line num="40" count="8" type="stmt"/>
