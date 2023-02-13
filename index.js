@@ -46,7 +46,7 @@ if (process.env.NODE_ENV !== 'test') {
       useNewUrlParser: true,
     })
     .then(() => {
-      console.log('DB Connected');
+      console.log("App connected to mongoDB successfully");
     })
     .catch((error) => {
       console.log(error);

@@ -38,9 +38,10 @@
   "transform": {
     "^.+\\.js$": "babel-jest"
   },
-  "moduleFileExtensions": [
-    "js",
-    "json",
-    "jsx"
-  ]
+  "moduleFileExtensions": ["js", "json", "jsx"],
+  "rootDir": ".",
+  "testEnvironment": "node",
+  "testRegex": ".e2e-spec.ts$",
+  "verbose": true,
+  "testTimeout": 1000000
 }
