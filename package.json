@@ -5,9 +5,10 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "jest --coverage",
-    "test:watch": "npm run test -- --watch",
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "jest --coverage --forceExit",
+    "test:watch": "npm run test -- --watch"
   },
   "keywords": [],
   "author": "",
@@ -21,12 +22,14 @@
     "express-session": "^1.17.3",
     "joi": "^17.7.0",
     "jsonwebtoken": "^9.0.0",
-    "mongoose": "^6.9.1",
+    "mongoose": "^6.9.0",
     "multer": "^1.4.5-lts.1",
     "multer-storage-cloudinary": "^4.0.0",
     "passport": "^0.6.0",
     "passport-local": "^1.0.0",
-    "sharp": "^0.31.3"
+    "sharp": "^0.31.3",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^4.6.0"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.20.2",
@@ -38,10 +41,9 @@
   "transform": {
     "^.+\\.js$": "babel-jest"
   },
-  "moduleFileExtensions": ["js", "json", "jsx"],
-  "rootDir": ".",
-  "testEnvironment": "node",
-  "testRegex": ".e2e-spec.ts$",
-  "verbose": true,
-  "testTimeout": 1000000
+  "moduleFileExtensions": [
+    "js",
+    "json",
+    "jsx"
+  ]
 }

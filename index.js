@@ -7,7 +7,9 @@ import queryRouter from './routes/queryRoutes.js'
 import bodyParser from 'body-parser';
 import authenticationRoutes from './routes/authRoutes.js';
 import * as confing_file from './configuration/passport.js';
-const PORT = process.env.PORT || 3000;
+import swaggerDocument from './swagger.js';
+const PORT = process.env.PORT;
+
 const app = express();
 app.use(
   bodyParser.json({
@@ -42,11 +44,12 @@ app.listen(`${PORT}`, () => {
 if (process.env.NODE_ENV !== 'test') {
   mongoose.set('strictQuery', false);
   mongoose
-    .connect("mongodb+srv://Jmukakalisa:Wharfdaycare%401@cluster0.fjkf6.mongodb.net/restFull-api?retryWrites=true&w=majority", {
+    .connect(process.env.mongo_url, {
       useNewUrlParser: true,
     })
     .then(() => {
       console.log("App connected to mongoDB successfully");
+      swaggerDocument(app, PORT);
     })
     .catch((error) => {
       console.log(error);

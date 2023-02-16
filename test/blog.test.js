@@ -4,12 +4,11 @@ import mongoose from 'mongoose';
 import blogModel from '../models/blogModels.js';
 import userModel from '../models/userModels.js';
 
-describe('Blogs unit testing', () => {
+describe('BLOGS UNIT', () => {
   beforeAll(async () => {
     try {
-      jest.setTimeout(10000)
       mongoose.set('strictQuery', false);
-      await mongoose.connect("mongodb+srv://Jmukakalisa:Wharfdaycare%401@cluster0.fjkf6.mongodb.net/restFull-api?retryWrites=true&w=majority");
+      await mongoose.connect(process.env.mongotest_url);
       await blogModel.create({
         title: 'title',
         content: 'content',
@@ -60,8 +59,8 @@ describe('Blogs unit testing', () => {
   // get a single blog
   describe('GET /api/blogs/:id', () => {
     it("return a 400 status if '_id' is invalid", async () => {
-      jest.setTimeout(10000)
-      const res = await request(app).get('/api/blogs/23333');
+      const id = mongoose.Types.ObjectId();
+      const res = await request(app).get(`/api/blogs/${id}`);
       expect(res.status).toEqual(400);
       const message = res.body.message;
       expect(message).toEqual("Blog doesn't exist");
