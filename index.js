@@ -48,7 +48,7 @@ app.listen(`${PORT}`, () => {
       useNewUrlParser: true,
     })
     .then(() => {
-      console.log("App connected to mongoDB successfully");
+      console.log("Application connected to mongoDB successfully");
       swaggerDocument(app, PORT);
     })
     .catch((error) => {
