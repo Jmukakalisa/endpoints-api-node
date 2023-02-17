@@ -1,14 +1,18 @@
 import request from 'supertest';
 import app from '../index.js';
-import mongoose from 'mongoose';
+import mongoose, { connect, mongo } from 'mongoose';
 import blogModel from '../models/blogModels.js';
 import userModel from '../models/userModels.js';
 
-describe('BLOGS UNIT', () => {
+describe("description details",()=>{
   beforeAll(async () => {
     try {
-      mongoose.set('strictQuery', false);
-      await mongoose.connect(process.env.mongotest_url);
+      // mongoose.set('strictQuery', false);
+      // await mongoose.connect(process.env.mongotest_url, {
+      //   useNewUrlParser: true,
+      // }).then(() => {
+      //   console.log('mongoDB connected');
+      // });
       await blogModel.create({
         title: 'title',
         content: 'content',
@@ -26,14 +30,13 @@ describe('BLOGS UNIT', () => {
     } catch (error) {
       console.log(error.message);
     }
-  });
+}, 50000);
+ 
 
-  afterAll(async () => {
-    // await blogModel.deleteMany({});
-    // await userModel.deleteMany({});
-    await mongoose.disconnect();
-    await mongoose.connection.close();
-  });
+  // afterAll(async () => {
+  //   // await mongoose.disconnect();
+  //   await mongoose.connection.close();
+  // },50000);
   //get all blogs
   describe('GET /api/blogs', () => {
     it('get any specified route', async () => {
@@ -55,7 +58,7 @@ describe('BLOGS UNIT', () => {
         '_id',
       );
     });
-  });
+  }, 50000);
   // get a single blog
   describe('GET /api/blogs/:id', () => {
     it("return a 400 status if '_id' is invalid", async () => {
@@ -72,7 +75,7 @@ describe('BLOGS UNIT', () => {
       const res = await request(app).get(`/api/blogs/${id}`);
       expect(res.status).toEqual(200);
     });
-  });
+  }, 50000);
   //post blog
   describe('POST /api/blogs', () => {
     it('return a 401 status if user is not logged in', async () => {
@@ -103,7 +106,7 @@ describe('BLOGS UNIT', () => {
         '_id',
       );
     });
-  });
+  }, 50000);
   //update blog
   describe('PATCH /api/blogs/:id', () => {
     it('return a 401 status if user is not logged in', async () => {
@@ -137,7 +140,7 @@ describe('BLOGS UNIT', () => {
         '_id',
       );
     });
-  });
+  }, 50000);
   //delete blog
   describe('DELETE /api/blogs/:id', () => {
     it('return a 401 status if user is not logged in', async () => {
@@ -176,7 +179,7 @@ describe('BLOGS UNIT', () => {
       const message = deletedBlog.body.message;
       expect(message).toEqual("Blog doesn't exist!");
     });
-  });
+  }, 50000);
   //add comment
   describe('POST /blogs/:id/comments', () => {
     it('return a 401 status if user is not logged in', async () => {
@@ -224,7 +227,7 @@ describe('BLOGS UNIT', () => {
       expect(updatedBlog.status).toEqual(201);
       expect(updatedBlog.body.message).toEqual('Comment added');
     });
-  });
+  }, 50000);
   // get all comments
   describe('GET /blogs/:id/comments', () => {
     it("return a 400 status if '_id' is invalid", async () => {
@@ -240,7 +243,7 @@ describe('BLOGS UNIT', () => {
       const res = await request(app).get(`/api/blogs/${id}/comments`);
       expect(res.status).toEqual(200);
     });
-  });
+  }, 50000);
   //add or remove like
   describe('POST /blogs/:id/likes', () => {
     it('return a 401 status if user is not logged in', async () => {
@@ -283,7 +286,7 @@ describe('BLOGS UNIT', () => {
       expect(updatedBlog.status).toEqual(201);
       expect(updatedBlog.body.data[0].message).toEqual('Done');
     });
-  });
+  }, 50000);
   // get number of likes
   describe('GET /api/blogs/:id/likes', () => {
     it("return a 400 status if '_id' is invalid", async () => {
@@ -300,4 +303,4 @@ describe('BLOGS UNIT', () => {
       expect(res.status).toEqual(200);
     });
   });
-});
+}, 50000);

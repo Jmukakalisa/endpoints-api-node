@@ -1,0 +1,14 @@
+version: '1'
+environments:
+  production:
+    secrets:
+      - name: NODE_ENV
+        value: "production"
+services:
+  web:
+    image: node
+    env:
+      PORT: 8080
+    command: npm start
+    ports:
+      - 8080:8080

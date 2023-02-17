@@ -52,10 +52,10 @@ const getBlogId = async (req, res) => {
     res.status(500).json({
       status: 500,
       success: false,
-      message: 'Server Error: Could get a single blog by id',
+      message: 'Server Error: Could not get a single blog by id',
       error: error.message,
     });
-    console.log('Error while getting a single blog', error.message);
+    // console.log('Error while getting a single blog', error.message);
   }
 };
 
