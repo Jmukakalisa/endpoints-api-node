@@ -33,7 +33,7 @@ jobs:
           # prefix: tests
       - store_artifacts: # for display in Artifacts: https://circleci.com/docs/2.0/artifacts/
           path: coverage
-          prefix: coverage
+          # prefix: coverage
       - store_test_results: # for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
           path: test-results
 
@@ -42,8 +42,8 @@ workflows:
     jobs:
       - build
       - test
-          requires:
-            - build
+          # requires:
+          #   - build
 
 notify:
   webhooks:
