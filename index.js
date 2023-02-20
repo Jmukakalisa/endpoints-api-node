@@ -15,6 +15,11 @@ const PORT = process.env.PORT;
 const app = express();
 app.use(cors);
 app.use(morgan("tiny"));
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "https://jmukakalisa.onrender.com/"); // Replace "*" with the domain you want to allow cross-origin requests from
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 app.use(
   bodyParser.json({
     limit: '50mb',
