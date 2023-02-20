@@ -5,12 +5,16 @@ import passport from 'passport';
 import BlogRoutes from './routes/blogRoutes.js';
 import queryRouter from './routes/queryRoutes.js'
 import bodyParser from 'body-parser';
+import cors from 'cors';
+import morgan from 'morgan';
 import authenticationRoutes from './routes/authRoutes.js';
 import * as confing_file from './configuration/passport.js';
 import swaggerDocument from './swagger.js';
 const PORT = process.env.PORT;
 
 const app = express();
+app.use(cors);
+app.use(morgan("tiny"));
 app.use(
   bodyParser.json({
     limit: '50mb',
