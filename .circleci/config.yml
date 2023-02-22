@@ -9,6 +9,8 @@ jobs:
   build:
     docker:
       - image: cimg/node:19.6.0
+    environment:
+      repo_token: zVyOTsaifLXFTcb66RxOuxHu6EUNHeMfN
     steps:
       - checkout
       - run:
