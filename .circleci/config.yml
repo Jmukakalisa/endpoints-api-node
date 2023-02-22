@@ -1,35 +1,20 @@
 version: 2.1
-orbs:
-  node: circleci/node@4.7.0
-  coveralls: coveralls/coveralls@1.0.6
 
-# Define a job to be invoked later in a workflow.
-# See: https://circleci.com/docs/2.0/configuration-reference/#jobs
 jobs:
   build:
     docker:
-      - image: cimg/node:19.6.0
+      - image: node:19.6.0
     environment:
       repo_token: zVyOTsaifLXFTcb66RxOuxHu6EUNHeMfN
-    steps:
-      - checkout
-      - run:
-          name: 'npm install'
-          command: npm install
 
-  test:
-    docker:
-      - image: cimg/node:19.6.0
     steps:
       - checkout
       - run:
-          name: 'npm install'
+          name: Install dependencies
           command: npm install
       - run:
-          name: 'npm test'
-          command: npm test
+          name: Run tests
+          command: npm test --coverage -- --verbose
       - run:
           name: Upload coverage to Coveralls
           command: npx coveralls < coverage/lcov.info
-
-
