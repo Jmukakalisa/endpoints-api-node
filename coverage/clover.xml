@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1676882443232" clover="3.2.0">
-  <project timestamp="1676882443232" name="All files">
+<coverage generated="1677063784122" clover="3.2.0">
+  <project timestamp="1677063784122" name="All files">
     <metrics statements="241" coveredstatements="177" conditionals="44" coveredconditionals="20" methods="38" coveredmethods="24" elements="323" coveredelements="221" complexity="0" loc="241" ncloc="241" packages="9" files="19" classes="19"/>
     <package name="endpoints-api-node">
       <metrics statements="30" coveredstatements="27" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="4"/>
