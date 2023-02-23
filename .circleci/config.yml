@@ -5,7 +5,7 @@ jobs:
     docker:
       - image: node:19.6.0
     environment:
-      repo_token: zVyOTsaifLXFTcb66RxOuxHu6EUNHeMfN
+      COVERALLS_REPO_TOKEN: zVyOTsaifLXFTcb66RxOuxHu6EUNHeMfN
 
     steps:
       - checkout
