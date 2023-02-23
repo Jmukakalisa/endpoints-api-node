@@ -13,28 +13,9 @@ jobs:
           name: Install dependencies
           command: npm install
       - run:
-<<<<<<< HEAD
-          name: 'npm test'
-          command: npm test
-      - run:
-          name: Upload coverage to Coveralls
-          command: npx coveralls < coverage/lcov.info
-workflows:
-  build_and_test:
-    jobs:
-      - build
-      - test:
-          requires:
-            - build
-
-notify:
-  webhooks:
-    - url: https://coveralls.io/webhook?repo_token=${process.env.repo_token}
-
-=======
           name: Run tests
           command: npm test --coverage -- --verbose
       - run:
           name: Upload coverage to Coveralls
           command: npx coveralls < coverage/lcov.info
->>>>>>> 6a8f0d01153d24f076936289db631e675381ba0f
+
